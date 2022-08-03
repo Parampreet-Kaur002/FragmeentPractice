@@ -52,7 +52,6 @@ class FirstFragment : Fragment() , ActivityInterface {
         // Inflate the layout for this fragment
         initView = inflater.inflate(R.layout.fragment_first, container, false)
 
-
         return initView
     }
 
@@ -84,8 +83,6 @@ class FirstFragment : Fragment() , ActivityInterface {
                 }
         }
 
-
-
     override fun ActivityInterface(color: Int, i: Int) {
                 tvHello.setText(" Changed color $i times ")
                 when(color){
@@ -98,7 +95,6 @@ class FirstFragment : Fragment() , ActivityInterface {
                     }
                     3->{
                         ll.setBackgroundColor(ContextCompat.getColor(FragmentActivity, R.color.yellow))
-
                     }
                     else->{}
                 }

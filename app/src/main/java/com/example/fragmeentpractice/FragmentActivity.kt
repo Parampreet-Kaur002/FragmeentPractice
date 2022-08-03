@@ -18,7 +18,6 @@ class FragmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fragment)
         btn = findViewById(R.id.btn)
-
         btnAlertDialog = findViewById(R.id.btnAlertDialog)
         btn.setOnClickListener {
             Snackbar.make(
@@ -31,6 +30,9 @@ class FragmentActivity : AppCompatActivity() {
                     Toast.makeText(this, "Toast from snackbar", Toast.LENGTH_SHORT).show()
                     var intent = Intent(this, ConstraintLayout::class.java)
                     startActivity(intent)
+                }
+                .show()
+        }
                     btnAlertDialog.setOnClickListener {
                         AlertDialog.Builder(this).apply {
                             setCancelable(false)
@@ -49,6 +51,9 @@ class FragmentActivity : AppCompatActivity() {
                                 i++
                             }
                         }.show()
+                    //}
+               // }
+
 //            alertDialog.setCancelable(false)
 //            alertDialog.setTitle("Title")
 //            alertDialog.setMessage("this is message")
@@ -61,16 +66,16 @@ class FragmentActivity : AppCompatActivity() {
 //            alertDialog.setNeutralButton("Neutral"){_,_->
 //                Toast.makeText(this, "Neutral button clicked", Toast.LENGTH_SHORT).show()
 //            }
-                        //alertDialog.show()
+            //alertDialog.show()
 
 
-                    }
-                }
-
-                       }
+              }
         }
-    fun showToast() {
-        Toast.makeText(this, " Invoked from fragment", Toast.LENGTH_SHORT).show()
 
+        fun showToast() {
+            Toast.makeText(this, " Invoked from fragment", Toast.LENGTH_SHORT).show()
+
+        }
     }
-}
+
+
